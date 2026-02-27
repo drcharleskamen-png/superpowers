@@ -1,0 +1,20 @@
+Title: Superpowers fork with Claude Code native task management support (v2.1.16+)
+
+---
+
+If you're using the Superpowers plugin for Claude Code (huge credit to Jesse Vincent and the obra/superpowers project), you might have noticed that Claude Code shipped a native task management system on January 23rd in v2.1.16.
+
+This changes how structured workflows operate. Tasks now persist across sessions, enforce dependency ordering, and give you real-time visibility into what the agent is doing -- no more ephemeral in-context todos that vanish when the session ends.
+
+I've been maintaining a fork that integrates these native features directly into the Superpowers workflow. When the agent writes a plan, it creates actual tasks with dependency graphs. Task 2 physically cannot start until Task 1 completes. The agent stays on rails instead of jumping ahead or skipping steps.
+
+The fork also adds 9 new skills beyond the upstream set: techdebt scanning, PR review with severity ratings, test execution with auto-framework detection, agent swarm operations, execution analytics, and end-of-session documentation. All general-purpose, all following the same SKILL.md format.
+
+Everything tracks upstream and stays compatible with the core Superpowers workflow. Claude Code-specific enhancements are additive.
+
+Fork: https://github.com/pcvelz/superpowers
+
+Install:
+/plugin install --source url https://github.com/pcvelz/superpowers.git
+
+Contributions welcome -- especially if you have CC-specific workflow patterns that would make good skills.

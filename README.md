@@ -1,5 +1,7 @@
 # Superpowers Extended for Claude Code
 
+Now with support for Claude Code's native task management system, released January 23, 2026 (v2.1.16+). Tasks persist across sessions, enforce dependency ordering, and provide real-time progress visibility -- replacing the ephemeral in-context todo list with file-backed task tracking.
+
 A community-maintained fork of [obra/superpowers](https://github.com/obra/superpowers) specifically for Claude Code users.
 
 ## Why This Fork Exists
