@@ -33,7 +33,7 @@ Skills like `writing-plans` and `brainstorming` now create native tasks with dep
 
 ### Testing
 
-1. Install the plugin: `/plugin install --source url https://github.com/pcvelz/superpowers.git`
+1. Install the plugin: `/plugin install --source url https://github.com/drcharleskamen-png/superpowers.git`
 2. Verify skills appear: `/help` should list all upstream + new skills
 3. Start a session and trigger a planning workflow -- confirm native tasks are created with dependencies
 4. Run `/review-pr`, `/quick-test`, or `/techdebt` to verify the new skills execute correctly

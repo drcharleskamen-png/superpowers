@@ -12,9 +12,9 @@ The fork also adds 9 new skills beyond the upstream set: techdebt scanning, PR r
 
 Everything tracks upstream and stays compatible with the core Superpowers workflow. Claude Code-specific enhancements are additive.
 
-Fork: https://github.com/pcvelz/superpowers
+Fork: https://github.com/drcharleskamen-png/superpowers
 
 Install:
-/plugin install --source url https://github.com/pcvelz/superpowers.git
+/plugin install --source url https://github.com/drcharleskamen-png/superpowers.git
 
 Contributions welcome -- especially if you have CC-specific workflow patterns that would make good skills.
