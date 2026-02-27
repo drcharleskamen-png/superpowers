@@ -5,11 +5,19 @@ disable-model-invocation: true
 argument-hint: "[PR number or URL]"
 ---
 
+## Task Tracking
+Before starting, create a task list using TodoWrite with the major steps below. Mark each completed as you finish it.
+
 **Tip:** PR reviews are ideal for subagent offloading — the review context stays isolated and only the verdict flows back.
 
 Review PR $ARGUMENTS as a staff engineer.
 
 ## 1. Get PR Context
+
+<HARD-GATE>
+MUST complete all 3 commands in step 1 (gh pr view, gh pr diff, gh pr view --comments) before starting the review checklist.
+</HARD-GATE>
+
 ```bash
 gh pr view $ARGUMENTS
 gh pr diff $ARGUMENTS
@@ -56,3 +64,9 @@ Then list findings as:
 
 Be specific — reference file:line for each finding.
 Be constructive — suggest fixes, not just problems.
+
+## Parallelism
+For large PRs (100+ lines changed), dispatch parallel subagents for each review category: correctness, security, design, performance, testing. Each returns findings with severity. Merge into the final verdict.
+
+## Next Steps
+For P0/P1 findings, create TodoWrite tasks to track each fix. Use `test-driven-development` when writing fixes.

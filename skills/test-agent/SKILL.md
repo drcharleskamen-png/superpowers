@@ -5,11 +5,18 @@ disable-model-invocation: true
 argument-hint: "[agent-id] [task description]"
 ---
 
+## Task Tracking
+Before starting, create a task list using TodoWrite with the major steps below. Mark each completed as you finish it.
+
 Test the agent "$0" in isolation with the task: "$1"
 
 ## Steps
 
 1. Read the agent's prompt file to understand its role
+
+<HARD-GATE>
+MUST read the agent's prompt file before running the test. Understanding the agent's role is required to evaluate output quality.
+</HARD-GATE>
 
 2. Run a direct test:
    ```bash
@@ -56,3 +63,6 @@ Test the agent "$0" in isolation with the task: "$1"
    - Any hallucinations or off-topic content?
 
 4. Report findings and suggest prompt improvements if needed.
+
+## Next Steps
+If output quality is poor, review and improve the agent's prompt file. Run `/swarm-status` to check prompt coverage.

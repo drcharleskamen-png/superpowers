@@ -5,9 +5,16 @@ disable-model-invocation: true
 argument-hint: "[team-name] [description]"
 ---
 
+## Task Tracking
+Before starting, create a task list using TodoWrite with the major steps below. Mark each completed as you finish it.
+
 Add a new team called "$0" to the agent swarm.
 
 ## Steps
+
+<HARD-GATE>
+MUST read at least one existing team YAML config before creating a new one. This ensures you follow the exact schema.
+</HARD-GATE>
 
 1. **Create YAML config** at `config/teams/$0.yaml`
    - Follow the exact schema of existing team configs (read one first)
@@ -48,3 +55,6 @@ Add a new team called "$0" to the agent swarm.
 - Team IDs must be lowercase with underscores (e.g., `competitive_intel`)
 - Prompt file names must match the `prompt_file` field in the YAML exactly (without `.md`)
 - The TeamRegistry auto-discovers YAML files — no registration code needed
+
+## Next Steps
+After completion, run `/swarm-status` to verify the new team loads correctly. Update CLAUDE.md with the new team.

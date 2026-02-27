@@ -8,6 +8,9 @@ allowed-tools:
   - Bash
 ---
 
+## Task Tracking
+Before starting, create a task list using TodoWrite with the major steps below. Mark each completed as you finish it.
+
 **Tip:** This skill reads many files and generates a large report. Consider using subagents if running alongside other tasks to preserve main context space.
 
 Run a full inventory of the agent swarm and report:
@@ -33,3 +36,9 @@ Flag anything that looks incomplete:
 - Teams defined in YAML but not wired into `main.py`
 
 Present as a clean summary table.
+
+## Parallelism
+For large projects, dispatch parallel subagents: one for teams/YAML inventory, one for prompt coverage, one for code health (py_compile + TODOs), one for dependency checks. Each subagent returns its section of the report. Merge results into the final summary table.
+
+## Next Steps
+If missing pieces found, use `/add-team` to scaffold them or `/techdebt` to audit code quality.

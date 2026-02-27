@@ -9,7 +9,8 @@ allowed-tools:
   - Bash
 ---
 
-**Tip:** For large codebases, add "use subagents" to your prompt to keep the main context clean. This scan generates substantial output.
+## Task Tracking
+Before starting, create a task list using TodoWrite with the major steps below. Mark each completed as you finish it.
 
 Perform a thorough technical debt audit of the project source directory.
 
@@ -50,9 +51,20 @@ Identify modules with no corresponding test file.
 Grep for `TODO`, `FIXME`, `HACK`, `XXX`, `TEMP` comments.
 
 ## Output
+
+<HARD-GATE>
+ALL findings MUST be categorized as P0/P1/P2. An uncategorized finding is an incomplete audit.
+</HARD-GATE>
+
 Present findings as a prioritized list:
 - **P0 (Fix now)**: Bugs, broken patterns, security issues
 - **P1 (Fix soon)**: Inconsistencies, missing error handling
 - **P2 (Fix later)**: Refactoring opportunities, nice-to-haves
 
 End with a count: "Found X issues: Y P0, Z P1, W P2"
+
+## Parallelism
+For comprehensive audits, dispatch parallel subagents per category: one for duplicated code, one for dead code, one for inconsistencies, one for type safety. Each returns findings in P0/P1/P2 format. Merge results into the final report.
+
+## Next Steps
+For P0 findings, use the `writing-plans` skill to create a remediation plan. For P1/P2, create TodoWrite tasks to track fixes.

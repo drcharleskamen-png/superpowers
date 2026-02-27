@@ -27,3 +27,6 @@ If there are unfinished tasks, list them clearly:
 ## 4. Output
 Present the session notes in a clean format the user can review.
 Keep it concise — no more than 20 lines.
+
+## Next Steps
+Remaining tasks should be captured in TodoWrite for the next session.

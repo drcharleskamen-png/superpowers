@@ -153,3 +153,6 @@ When the user asks an analytics question:
 
 If the database doesn't exist, inform the user to run a swarm task first:
 `python main.py "your task"`
+
+## Next Steps
+If costs are high, consider switching routing agents to Haiku. If failure rates are high, investigate with `systematic-debugging`.

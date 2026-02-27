@@ -5,6 +5,9 @@ disable-model-invocation: true
 argument-hint: "[test path or pattern]"
 ---
 
+## Task Tracking
+Before starting, create a task list using TodoWrite with the major steps below. Mark each completed as you finish it.
+
 Run tests for: $ARGUMENTS
 
 ## Steps
@@ -27,3 +30,6 @@ Run tests for: $ARGUMENTS
    - Read the failing test and the code it tests
    - Diagnose the root cause
    - Suggest a fix (but don't apply it without asking)
+
+## Next Steps
+If tests fail, use the `systematic-debugging` skill for root cause analysis before attempting fixes.
